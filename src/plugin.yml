@@ -2,7 +2,7 @@ name: Arconix
 description: Arconix
 version: 1
 main: com.songoda.arconix.Arconix
-author: songoda
+authors: [Songoda, TheCrystalStar]
 commands:
   Arconix:
     description: I have no idea.
