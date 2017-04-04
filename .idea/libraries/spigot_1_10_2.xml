@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="spigot-1.10.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.10.2.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.7.10-SNAPSHOT-b1657 (1).jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.3-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.4-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.6-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.8.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.9-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Spigot 1.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.10.2.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.7.10-SNAPSHOT-b1657 (1).jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.3-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.4-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.6-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.8.8.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.9-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Revisions/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Minecraft/Development/Spigot 1.11.jar!/" />
+    </SOURCES>
+  </library>
+</component>
