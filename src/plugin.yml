@@ -1,0 +1,11 @@
+name: Arconix
+description: Arconix
+version: 1
+main: com.songoda.arconix.Arconix
+author: songoda
+commands:
+  Arconix:
+    description: I have no idea.
+    default: true
+    aliases: [ar]
+    usage: /<command> [reload]
