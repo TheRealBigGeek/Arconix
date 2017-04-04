@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/API/MCUpdate.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Arconix.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/LoginListeners.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/PlayerListeners.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Handlers/HologramHandler.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Methods/APlayer.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Methods/Formatting.java" charset="UTF-16" />
