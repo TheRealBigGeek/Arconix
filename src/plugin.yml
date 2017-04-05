@@ -1,6 +1,6 @@
 name: Arconix
 description: Arconix
-version: 1.0.1
+version: 1.0.2
 main: com.songoda.arconix.Arconix
 authors: [Songoda, TheCrystalStar]
 commands:
