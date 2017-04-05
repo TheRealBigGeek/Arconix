@@ -5,7 +5,5 @@ main: com.songoda.arconix.Arconix
 authors: [Songoda, TheCrystalStar]
 commands:
   Arconix:
-    description: I have no idea.
-    default: true
+    description: Main command for ArconixAPI
     aliases: [ar]
-    usage: /<command> [reload]
