@@ -7,6 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="spigot-1.10.2" level="project" />
+    <orderEntry type="library" name="old" level="project" />
+    <orderEntry type="library" name="Lib" level="project" />
   </component>
 </module>
