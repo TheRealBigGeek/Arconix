@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Commands/SubCommand.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Commands/Subcommands/ActionBarCMD.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Commands/Subcommands/HologramCMD.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Commands/Subcommands/ReloadCMD.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Commands/Subcommands/SignEditorCMD.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Commands/Subcommands/SubtitleCMD.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Commands/Subcommands/TitleSubCMD.java" charset="UTF-16" />
