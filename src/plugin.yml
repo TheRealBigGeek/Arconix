@@ -1,9 +1,8 @@
 name: Arconix
 description: Arconix
-version: 1.0.10
+version: 1.0.11
 main: com.songoda.arconix.Arconix
 authors: [Songoda, TheCrystalStar]
 commands:
   Arconix:
     description: Main command for ArconixAPI
-    aliases: [ar]
