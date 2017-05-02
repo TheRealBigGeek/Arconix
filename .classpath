@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.7.10-SNAPSHOT-b1657 (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.8.3-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.8.4-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.8.6-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.8.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.8-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.9-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Revisions/spigot-1.10.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kiran Hart/Documents/Minecraft/Development/Spigot 1.11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
