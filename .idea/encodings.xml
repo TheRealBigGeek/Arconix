@@ -26,16 +26,12 @@
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/Custom/TitleSendEvent.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/CustomEventListeners.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/RegionEvents.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Utils/AEconomy.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Utils/DefaultFontInfo.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Utils/RegionUtils.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/ActionBar/ActionBar1_9R1.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/BossBar/BossBar.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/BossBar/BossBar1_8R1.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/BossBar/BossBar1_8R2.java" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/BossBar/BossBar1_8R3.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_10R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_11R1.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_12R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_7R4.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_8R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_8R2.java" charset="UTF-16" />
@@ -46,6 +42,7 @@
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/SignEditor/SignEditor.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/SignEditor/SignEditor1_10R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/SignEditor/SignEditor1_11R1.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/SignEditor/SignEditor1_12R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/SignEditor/SignEditor1_7R4.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/SignEditor/SignEditor1_8R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/SignEditor/SignEditor1_8R2.java" charset="UTF-16" />
@@ -55,6 +52,7 @@
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/TabList/TabList.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/TabList/TabList1_10R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/TabList/TabList1_11R1.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/TabList/TabList1_12R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/TabList/TabList1_8R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/TabList/TabList1_8R2.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/TabList/TabList1_8R3.java" charset="UTF-16" />
@@ -63,6 +61,7 @@
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Title/Title.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Title/Title1_10R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Title/Title1_11R1.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Title/Title1_12R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Title/Title1_8R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Title/Title1_8R2.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Title/Title1_8R3.java" charset="UTF-16" />
