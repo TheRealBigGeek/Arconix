@@ -26,9 +26,13 @@
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/Custom/TitleSendEvent.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/CustomEventListeners.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Events/RegionEvents.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Methods/Sounds.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Utils/DefaultFontInfo.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/Utils/RegionUtils.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/ActionBar/ActionBar1_9R1.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Enchantments/Enchantment.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Enchantments/Enchantment1_12R1.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Enchantments/Enchantment1_8R3.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_10R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_11R1.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/src/com/songoda/arconix/packets/Ping/Ping1_12R1.java" charset="UTF-16" />
