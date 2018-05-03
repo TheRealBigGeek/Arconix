@@ -23,6 +23,7 @@
     </repositories>
 
     <dependencies>
+        <!--Our main API-->
         <dependency>
             <groupId>com.songoda</groupId>
             <artifactId>arconix-api</artifactId>
@@ -31,6 +32,74 @@
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
+
+        <!--All supported MC versions should be built into the plugin-->
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_7_R4</artifactId>
+            <version>v1_7_R4</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_8_R1</artifactId>
+            <version>v1_8_R1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_8_R2</artifactId>
+            <version>v1_8_R2</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_8_R3</artifactId>
+            <version>v1_8_R3</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_9_R1</artifactId>
+            <version>v1_9_R1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_10_R1</artifactId>
+            <version>v1_10_R1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_11_R1</artifactId>
+            <version>v1_11_R1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda</groupId>
+            <artifactId>arconix-v1_12_R1</artifactId>
+            <version>v1_12_R1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!--Latest Bukkit release to build upon-->
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
@@ -43,7 +112,7 @@
 
     <build>
         <directory>../target</directory> <!-- Build it one level up, because it is the one we care about -->
-        <finalName>AbstractionExamplePlugin</finalName>
+        <finalName>Arconix</finalName>
         <!-- Define filtering for the inclusion of plugin.yml, so we can utilize the pom.xml version in it -->
         <resources>
             <resource>
