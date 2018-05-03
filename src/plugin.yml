@@ -1,8 +1,0 @@
-name: Arconix
-description: Arconix
-version: 1.1.1
-main: com.songoda.arconix.Arconix
-authors: [Songoda, TheCrystalStar]
-commands:
-  Arconix:
-    description: Main command for ArconixAPI

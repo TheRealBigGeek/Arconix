@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/API/API.iml" filepath="$PROJECT_DIR$/API/API.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arconix.iml" filepath="$PROJECT_DIR$/Arconix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Plugin/Plugin.iml" filepath="$PROJECT_DIR$/Plugin/Plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_10_R1/v1_10_R1.iml" filepath="$PROJECT_DIR$/v1_10_R1/v1_10_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_11_R1/v1_11_R1.iml" filepath="$PROJECT_DIR$/v1_11_R1/v1_11_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_12_R1/v1_12_R1.iml" filepath="$PROJECT_DIR$/v1_12_R1/v1_12_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_7_R4/v1_7_R4.iml" filepath="$PROJECT_DIR$/v1_7_R4/v1_7_R4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_8_R1/v1_8_R1.iml" filepath="$PROJECT_DIR$/v1_8_R1/v1_8_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_8_R2/v1_8_R2.iml" filepath="$PROJECT_DIR$/v1_8_R2/v1_8_R2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_8_R3/v1_8_R3.iml" filepath="$PROJECT_DIR$/v1_8_R3/v1_8_R3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v1_9_R1/v1_9_R1.iml" filepath="$PROJECT_DIR$/v1_9_R1/v1_9_R1.iml" />
     </modules>
   </component>
 </project>
