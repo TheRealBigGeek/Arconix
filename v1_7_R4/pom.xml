@@ -8,12 +8,12 @@
         <project.build.sourceEncoding>UTF-16</project.build.sourceEncoding>
     </properties>
 
-    <artifactId>arconix-v1_7_R4</artifactId>
-    <name>Abstraction Example Plugin implementation v1_7_R4</name>
+    <groupId>com.songoda.arconix.nms</groupId>
+    <artifactId>v1_7_R4</artifactId>
     <version>v1_7_R4</version>
 
     <parent>
-        <groupId>com.songoda</groupId>
+        <groupId>com.songoda.arconix</groupId>
         <version>2.0.0</version>
         <artifactId>Arconix</artifactId>
     </parent>
@@ -28,9 +28,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-api</artifactId> <!-- Depend on the API! -->
-            <version>API</version>
+            <groupId>com.songoda.arconix</groupId>
+            <artifactId>api</artifactId> <!-- Depend on the API! -->
+            <version>2.0.0</version>
             <type>jar</type>
         </dependency>
     </dependencies>

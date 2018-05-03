@@ -8,12 +8,12 @@
         <project.build.sourceEncoding>UTF-16</project.build.sourceEncoding>
     </properties>
 
-    <artifactId>arconix-plugin</artifactId>
+    <artifactId>plugin</artifactId>
     <name>Arconix</name>
     <version>2.0.0</version>
 
     <parent>
-        <groupId>com.songoda</groupId>
+        <groupId>com.songoda.arconix</groupId>
         <version>2.0.0</version>
         <artifactId>Arconix</artifactId>
     </parent>
@@ -25,9 +25,9 @@
     <dependencies>
         <!--Our main API-->
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-api</artifactId>
-            <version>API</version>
+            <groupId>com.songoda.arconix</groupId>
+            <artifactId>api</artifactId>
+            <version>2.0.0</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
@@ -35,64 +35,64 @@
 
         <!--All supported MC versions should be built into the plugin-->
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_7_R4</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_7_R4</artifactId>
             <version>v1_7_R4</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_8_R1</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_8_R1</artifactId>
             <version>v1_8_R1</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_8_R2</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_8_R2</artifactId>
             <version>v1_8_R2</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_8_R3</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_8_R3</artifactId>
             <version>v1_8_R3</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_9_R1</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_9_R1</artifactId>
             <version>v1_9_R1</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_10_R1</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_10_R1</artifactId>
             <version>v1_10_R1</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_11_R1</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_11_R1</artifactId>
             <version>v1_11_R1</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.songoda</groupId>
-            <artifactId>arconix-v1_12_R1</artifactId>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_12_R1</artifactId>
             <version>v1_12_R1</version>
             <type>jar</type>
             <scope>compile</scope>
