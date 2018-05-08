@@ -37,6 +37,12 @@ public class ArconixAPI {
     private HologramHandler holo;
 
     private ArconixAPI() {
+        hologramFile = new ConfigWrapper(plugin, "", "holograms.yml");
+        regionFile = new ConfigWrapper(plugin, "", "regions.yml");
+
+        loadHoloFile();
+
+        holo = new HologramHandler();
     }
 
     public static ArconixAPI getApi() {
