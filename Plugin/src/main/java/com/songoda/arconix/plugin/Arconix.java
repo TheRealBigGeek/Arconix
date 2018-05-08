@@ -6,7 +6,6 @@ import com.songoda.arconix.api.events.PlayerListeners;
 import com.songoda.arconix.api.events.RegionEvents;
 import com.songoda.arconix.api.handlers.HologramHandler;
 import com.songoda.arconix.api.massivestats.MassiveStats;
-import com.songoda.arconix.api.mcupdate.MCUpdate;
 import com.songoda.arconix.api.packets.PacketLibrary;
 import com.songoda.arconix.plugin.Commands.ArconixCMD;
 import com.songoda.arconix.plugin.Commands.BaseCommand;
@@ -33,7 +32,7 @@ public class Arconix extends JavaPlugin implements Listener {
         api.packetLibrary = new PacketLibrary();
         api.packetLibrary.setupPackets(serverVersion);
 
-        @SuppressWarnings("unused") MCUpdate update = new MCUpdate(this, true);
+        //@SuppressWarnings("unused") MCUpdate update = new MCUpdate(this, true);
 
         getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
         getServer().getPluginManager().registerEvents(new CustomEventListeners(), this);
