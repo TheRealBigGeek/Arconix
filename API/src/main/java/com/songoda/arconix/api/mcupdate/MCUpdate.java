@@ -20,6 +20,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+@Deprecated
 public class MCUpdate implements Listener {
 
     private final static String VERSION = "1.0";
