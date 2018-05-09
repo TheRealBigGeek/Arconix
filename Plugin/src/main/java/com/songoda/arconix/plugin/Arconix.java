@@ -5,6 +5,7 @@ import com.songoda.arconix.api.events.CustomEventListeners;
 import com.songoda.arconix.api.events.PlayerListeners;
 import com.songoda.arconix.api.events.RegionEvents;
 import com.songoda.arconix.api.handlers.HologramHandler;
+import com.songoda.arconix.api.massivestats.MassiveStats;
 import com.songoda.arconix.api.packets.PacketLibrary;
 import com.songoda.arconix.plugin.Commands.ArconixCMD;
 import com.songoda.arconix.plugin.Commands.BaseCommand;
@@ -40,7 +41,7 @@ public class Arconix extends JavaPlugin implements Listener {
             getCommand(command.getName()).setExecutor(command);
         }
 
-        //new MassiveStats(this, 900);
+        new MassiveStats(this, 900);
     }
 
     @Override

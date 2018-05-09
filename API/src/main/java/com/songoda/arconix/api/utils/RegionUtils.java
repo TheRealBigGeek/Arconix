@@ -1,6 +1,7 @@
 package com.songoda.arconix.api.utils;
 
 import com.songoda.arconix.api.ArconixAPI;
+import com.songoda.arconix.api.methods.formatting.TextComponent;
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
@@ -30,7 +31,7 @@ public class RegionUtils {
         arconix.regionFile.getConfig().set("regions." + regionName.toLowerCase() + ".location2.y", location2.getBlockY());
         arconix.regionFile.getConfig().set("regions." + regionName.toLowerCase() + ".location2.z", location2.getBlockZ());
         arconix.regionFile.saveConfig();
-        p.sendMessage(arconix.format().formatText("&eYou created a new region by the name of &6" + regionName.toLowerCase()));
+        p.sendMessage(TextComponent.formatText("&eYou created a new region by the name of &6" + regionName.toLowerCase()));
         arconix.selectedLocationOne.remove(p);
         arconix.selectedLocationTwo.remove(p);
         arconix.inSelectionMode.remove(p);
@@ -56,7 +57,7 @@ public class RegionUtils {
         ArconixAPI arconix = ArconixAPI.getApi();
         arconix.regionFile.getConfig().set("regions." + regionName.toLowerCase(), null);
         arconix.regionFile.saveConfig();
-        p.sendMessage(arconix.format().formatText("&eYou deleted the region by the name of &6" + regionName.toLowerCase()));
+        p.sendMessage(TextComponent.formatText("&eYou deleted the region by the name of &6" + regionName.toLowerCase()));
     }
 
     public void removeRegion(String regionName) {

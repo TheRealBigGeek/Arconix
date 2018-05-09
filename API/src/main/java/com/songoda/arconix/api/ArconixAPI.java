@@ -59,14 +59,32 @@ public class ArconixAPI {
         return api;
     }
 
+    /**
+     * Use {@link com.songoda.arconix.api.methods.serialize.Serialize}
+     *
+     * @return {@link Serializer}
+     */
+    @Deprecated
     public Serializer serialize() {
         return Serializer.getInstance();
     }
 
+    /**
+     * USe {@link com.songoda.arconix.api.methods.formatting.TextComponent}
+     *
+     * @return {@link Formatting}
+     */
+    @Deprecated
     public Formatting format() {
         return new Formatting();
     }
 
+    /**
+     * Use {@link com.songoda.arconix.api.methods.inventory.Inventory}
+     *
+     * @return {@link GUI}
+     */
+    @Deprecated
     public GUI getGUI() {
         return new GUI();
     }
@@ -79,10 +97,20 @@ public class ArconixAPI {
         return new APlayer(player);
     }
 
+    /**
+     * Use {@link com.songoda.arconix.api.methods.sound.ASound}
+     * @return {@link Sounds}
+     */
+    @Deprecated
     public Sounds sounds() {
         return new Sounds();
     }
 
+    /**
+     * Use {@link com.songoda.arconix.api.methods.math.AMath}
+     * @return {@link Maths}
+     */
+    @Deprecated
     public Maths doMath() {
         return new Maths();
     }

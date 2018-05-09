@@ -1,4 +1,4 @@
-package com.songoda.arconix.api.utils;
+package com.songoda.arconix.api.methods.serialize;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -14,25 +14,21 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * Created by songoda on 4/2/2017. Use {@link com.songoda.arconix.api.methods.serialize.Serialize}
- */
-@Deprecated
-public class Serializer {
-    private static Serializer instance;
+@SuppressWarnings({"WeakerAccess", "Duplicates", "unused"})
+public class Serialize {
+    private static Serialize instance;
 
-    private Map<String, Location> serializecache = new HashMap<>();
+    private Map<String, Location> serializeCache = new HashMap<>();
 
     //make singleton
-    private Serializer() {
+    private Serialize() {
     }
 
-    public static Serializer getInstance() {
+    public static Serialize getInstance() {
         if (instance == null)
-            instance = new Serializer();
+            instance = new Serialize();
         return instance;
     }
-
 
     public String serializeLocation(Block b) {
         return serializeLocation(b.getLocation());
@@ -43,22 +39,23 @@ public class Serializer {
         double x = location.getX();
         double y = location.getY();
         double z = location.getZ();
-        String str = "w:" + w + "x:" + x + "y:" + y + "z:" + z;
-        return str.replace(".0", "").replace(".", "~");
+        String str = w + ":" + x + ":" + y + ":" + z;
+        str = str.replace(".0", "").replace("/", "");
+        return str;
     }
 
     public Location unserializeLocation(String str) {
-        if (serializecache.containsKey(str)) {
-            return serializecache.get(str).clone();
+        if (serializeCache.containsKey(str)) {
+            return serializeCache.get(str).clone();
         }
-        String cachekey = str;
-        str = str.replace("y:", ":").replace("z:", ":").replace("w:", "").replace("x:", ":").replace("~", ".");
+        String cacheKey = str;
+        str = str.replace("y:", ":").replace("z:", ":").replace("w:", "").replace("x:", ":").replace("/", ".");
         List<String> args = Arrays.asList(str.split("\\s*:\\s*"));
 
         World world = Bukkit.getWorld(args.get(0));
         double x = Double.parseDouble(args.get(1)), y = Double.parseDouble(args.get(2)), z = Double.parseDouble(args.get(3));
         Location location = new Location(world, x, y, z, 0, 0);
-        serializecache.put(cachekey, location.clone());
+        serializeCache.put(cacheKey, location.clone());
         return location;
     }
 
@@ -68,8 +65,8 @@ public class Serializer {
             BukkitObjectOutputStream dataOutput = new BukkitObjectOutputStream(outputStream);
 
             dataOutput.writeInt(items.size());
-            for (int i = 0; i < items.size(); i++) {
-                dataOutput.writeObject(items.get(i));
+            for (ItemStack item : items) {
+                dataOutput.writeObject(item);
             }
             dataOutput.close();
             return Base64Coder.encodeLines(outputStream.toByteArray());

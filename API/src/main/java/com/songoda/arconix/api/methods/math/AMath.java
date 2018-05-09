@@ -1,11 +1,7 @@
-package com.songoda.arconix.api.methods;
+package com.songoda.arconix.api.methods.math;
 
-/**
- * Created by songoda on 4/2/2017. Use {@link com.songoda.arconix.api.methods.math.AMath}
- */
-@Deprecated
-public class Maths {
-
+@SuppressWarnings("unused")
+public class AMath {
     public boolean isNumeric(String s) {
         return s.matches("[-+]?\\d*\\.?\\d+");
     }

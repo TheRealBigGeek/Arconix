@@ -4,6 +4,7 @@ import com.songoda.arconix.api.ArconixAPI;
 import com.songoda.arconix.api.events.Custom.RegionEnterEvent;
 import com.songoda.arconix.api.events.Custom.RegionExitEvent;
 import com.songoda.arconix.api.events.Custom.RegionMoveInEvent;
+import com.songoda.arconix.api.methods.formatting.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
@@ -75,19 +76,19 @@ public class RegionEvents implements Listener {
                 if (keys.equalsIgnoreCase("actionbar")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onEnter." + keys);
-                    arconix.packetLibrary.getActionBarManager().sendActionBar(p, arconix.format().formatText(text));
+                    arconix.packetLibrary.getActionBarManager().sendActionBar(p, TextComponent.formatText(text));
                 }
 
                 if (keys.equalsIgnoreCase("ping")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onEnter." + keys);
-                    p.sendMessage(arconix.format().formatText(text).replace("{ping}", arconix.packetLibrary.getPingManager().getPing(p) + ""));
+                    p.sendMessage(TextComponent.formatText(text).replace("{ping}", arconix.packetLibrary.getPingManager().getPing(p) + ""));
                 }
 
                 if (keys.equalsIgnoreCase("text")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onEnter." + keys);
-                    p.sendMessage(arconix.format().formatText(text));
+                    p.sendMessage(TextComponent.formatText(text));
                 }
 
                 if (keys.equalsIgnoreCase("title")) {
@@ -96,7 +97,7 @@ public class RegionEvents implements Listener {
                     int stay = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onEnter." + keys + ".stay");
                     int fadeOut = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onEnter." + keys + ".fadeout");
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onEnter." + keys + ".text");
-                    arconix.packetLibrary.getTitleManager().sendTitle(p, arconix.format().formatText(text), fadeIn, stay, fadeOut);
+                    arconix.packetLibrary.getTitleManager().sendTitle(p, TextComponent.formatText(text), fadeIn, stay, fadeOut);
                 }
 
                 if (keys.equalsIgnoreCase("subtitle")) {
@@ -105,7 +106,7 @@ public class RegionEvents implements Listener {
                     int stay = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onEnter." + keys + ".stay");
                     int fadeOut = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onEnter." + keys + ".fadeout");
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onEnter." + keys + ".text");
-                    arconix.packetLibrary.getTitleManager().sendSubitle(p, arconix.format().formatText(text), fadeIn, stay, fadeOut);
+                    arconix.packetLibrary.getTitleManager().sendSubitle(p, TextComponent.formatText(text), fadeIn, stay, fadeOut);
                 }
             }
         }
@@ -128,19 +129,19 @@ public class RegionEvents implements Listener {
                 if (keys.equalsIgnoreCase("actionbar")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onExit." + keys);
-                    arconix.packetLibrary.getActionBarManager().sendActionBar(p, arconix.format().formatText(text));
+                    arconix.packetLibrary.getActionBarManager().sendActionBar(p, TextComponent.formatText(text));
                 }
 
                 if (keys.equalsIgnoreCase("ping")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onExit." + keys);
-                    p.sendMessage(arconix.format().formatText(text).replace("{ping}", arconix.packetLibrary.getPingManager().getPing(p) + ""));
+                    p.sendMessage(TextComponent.formatText(text).replace("{ping}", arconix.packetLibrary.getPingManager().getPing(p) + ""));
                 }
 
                 if (keys.equalsIgnoreCase("text")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onExit." + keys);
-                    p.sendMessage(arconix.format().formatText(text));
+                    p.sendMessage(TextComponent.formatText(text));
                 }
 
                 if (keys.equalsIgnoreCase("title")) {
@@ -149,7 +150,7 @@ public class RegionEvents implements Listener {
                     int stay = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onExit." + keys + ".stay");
                     int fadeOut = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onExit." + keys + ".fadeout");
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onExit." + keys + ".text");
-                    arconix.packetLibrary.getTitleManager().sendTitle(p, arconix.format().formatText(text), fadeIn, stay, fadeOut);
+                    arconix.packetLibrary.getTitleManager().sendTitle(p, TextComponent.formatText(text), fadeIn, stay, fadeOut);
                 }
 
                 if (keys.equalsIgnoreCase("subtitle")) {
@@ -158,7 +159,7 @@ public class RegionEvents implements Listener {
                     int stay = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onExit." + keys + ".stay");
                     int fadeOut = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onExit." + keys + ".fadeout");
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onExit." + keys + ".text");
-                    arconix.packetLibrary.getTitleManager().sendSubitle(p, arconix.format().formatText(text), fadeIn, stay, fadeOut);
+                    arconix.packetLibrary.getTitleManager().sendSubitle(p, TextComponent.formatText(text), fadeIn, stay, fadeOut);
                 }
             }
         }
@@ -182,19 +183,19 @@ public class RegionEvents implements Listener {
                 if (keys.equalsIgnoreCase("actionbar")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onWalk." + keys);
-                    arconix.packetLibrary.getActionBarManager().sendActionBar(p, arconix.format().formatText(text));
+                    arconix.packetLibrary.getActionBarManager().sendActionBar(p, TextComponent.formatText(text));
                 }
 
                 if (keys.equalsIgnoreCase("ping")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onWalk." + keys);
-                    p.sendMessage(arconix.format().formatText(text).replace("{ping}", arconix.packetLibrary.getPingManager().getPing(p) + ""));
+                    p.sendMessage(TextComponent.formatText(text).replace("{ping}", arconix.packetLibrary.getPingManager().getPing(p) + ""));
                 }
 
                 if (keys.equalsIgnoreCase("text")) {
 
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onWalk." + keys);
-                    p.sendMessage(arconix.format().formatText(text));
+                    p.sendMessage(TextComponent.formatText(text));
                 }
 
                 if (keys.equalsIgnoreCase("title")) {
@@ -203,7 +204,7 @@ public class RegionEvents implements Listener {
                     int stay = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onWalk." + keys + ".stay");
                     int fadeOut = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onWalk." + keys + ".fadeout");
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onWalk." + keys + ".text");
-                    arconix.packetLibrary.getTitleManager().sendTitle(p, arconix.format().formatText(text), fadeIn, stay, fadeOut);
+                    arconix.packetLibrary.getTitleManager().sendTitle(p, TextComponent.formatText(text), fadeIn, stay, fadeOut);
                 }
 
                 if (keys.equalsIgnoreCase("subtitle")) {
@@ -212,7 +213,7 @@ public class RegionEvents implements Listener {
                     int stay = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onWalk." + keys + ".stay");
                     int fadeOut = arconix.regionFile.getConfig().getInt("regions." + e.getRegionName() + ".activations.onWalk." + keys + ".fadeout");
                     String text = arconix.regionFile.getConfig().getString("regions." + e.getRegionName() + ".activations.onWalk." + keys + ".text");
-                    arconix.packetLibrary.getTitleManager().sendSubitle(p, arconix.format().formatText(text), fadeIn, stay, fadeOut);
+                    arconix.packetLibrary.getTitleManager().sendSubitle(p, TextComponent.formatText(text), fadeIn, stay, fadeOut);
                 }
             }
         }
@@ -241,11 +242,11 @@ public class RegionEvents implements Listener {
             if (arconix.selectedLocationOne.containsKey(p)) {
                 arconix.selectedLocationOne.remove(p);
                 arconix.selectedLocationOne.put(p, e.getClickedBlock().getLocation());
-                p.sendMessage(arconix.format().formatText("&eFirst location updated!"));
+                p.sendMessage(TextComponent.formatText("&eFirst location updated!"));
                 return;
             }
             arconix.selectedLocationOne.put(p, e.getClickedBlock().getLocation());
-            p.sendMessage(arconix.format().formatText("&eYou selected the first location."));
+            p.sendMessage(TextComponent.formatText("&eYou selected the first location."));
             return;
         }
 
@@ -254,12 +255,11 @@ public class RegionEvents implements Listener {
             if (arconix.selectedLocationTwo.containsKey(p)) {
                 arconix.selectedLocationTwo.remove(p);
                 arconix.selectedLocationTwo.put(p, e.getClickedBlock().getLocation());
-                p.sendMessage(arconix.format().formatText("&eSecond location updated!"));
+                p.sendMessage(TextComponent.formatText("&eSecond location updated!"));
                 return;
             }
             arconix.selectedLocationTwo.put(p, e.getClickedBlock().getLocation());
-            p.sendMessage(arconix.format().formatText("&eYou selected the second location."));
-            return;
+            p.sendMessage(TextComponent.formatText("&eYou selected the second location."));
         }
     }
 

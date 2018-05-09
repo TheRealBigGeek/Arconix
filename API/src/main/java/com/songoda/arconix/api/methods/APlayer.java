@@ -9,9 +9,10 @@ import org.bukkit.util.Vector;
 /**
  * Created by songoda on 4/2/2017.
  */
+@SuppressWarnings("unused")
 public class APlayer {
 
-    Player player;
+    private Player player;
 
     public APlayer(Player pl) {
         player = pl;
