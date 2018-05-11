@@ -20,6 +20,7 @@
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/events/PlayerListeners.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/events/RegionEvents.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/handlers/HologramHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/massivestats/MassiveStats.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/mcupdate/MCUpdate.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/methods/APlayer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/methods/Formatting.java" charset="UTF-8" />
