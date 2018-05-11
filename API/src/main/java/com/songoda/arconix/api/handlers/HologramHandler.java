@@ -1,7 +1,7 @@
 package com.songoda.arconix.api.handlers;
 
 import com.songoda.arconix.api.ArconixAPI;
-import com.songoda.arconix.api.methods.serialize.Serialize;
+import com.songoda.arconix.api.utils.Serializer;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
@@ -28,7 +28,7 @@ public class HologramHandler {
             ConfigurationSection cs = api.hologramFile.getConfig().getConfigurationSection("Holograms");
             for (String key : cs.getKeys(false)) {
                 List<String> list = api.hologramFile.getConfig().getStringList("Holograms." + key + ".lines");
-                Location location = Serialize.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + key + ".location"));
+                Location location = Serializer.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + key + ".location"));
                 map.put(location, list);
             }
         }
@@ -45,7 +45,7 @@ public class HologramHandler {
 
     public void deleteHologram(Player p, String name) {
         if (api.hologramFile.getConfig().contains("Holograms")) {
-            Location location = Serialize.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + name + ".location"));
+            Location location = Serializer.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + name + ".location"));
             api.hologramFile.getConfig().set("Holograms." + name, null);
             api.packetLibrary.getHologramManager().despawnHologram(location);
             stream(location.getChunk());
@@ -66,7 +66,7 @@ public class HologramHandler {
     }
 
     public void saveHologram(Location location, String title, List<String> list) {
-        String serial = Serialize.getInstance().serializeLocation(location);
+        String serial = Serializer.getInstance().serializeLocation(location);
         api.hologramFile.getConfig().set("Holograms." + title + ".location", serial);
         api.hologramFile.getConfig().set("Holograms." + title + ".lines", list);
     }

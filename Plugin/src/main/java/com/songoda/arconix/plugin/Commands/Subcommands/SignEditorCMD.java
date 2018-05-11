@@ -7,6 +7,8 @@ import org.bukkit.Material;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 
+import java.util.Set;
+
 /**
  * Created by Kiran Hart on 4/7/2017.
  */
@@ -23,10 +25,10 @@ public class SignEditorCMD extends SubCommand {
 
         if (args.length == 1) {
 
-            if (p.getTargetBlock(null, 200).getType() != Material.SIGN_POST) {
+            if (p.getTargetBlock((Set<Material>) null, 200).getType() != Material.SIGN_POST) {
                 p.sendMessage(formatting.formatText("&cPlease look at a sign before using this command!"));
             } else {
-                Sign sign = (Sign) p.getTargetBlock(null, 25).getState();
+                Sign sign = (Sign) p.getTargetBlock((Set<Material>) null, 25).getState();
                 ArconixAPI.getApi().packetLibrary.getSignEditorManager().openSignEditor(p, sign);
             }
         }
