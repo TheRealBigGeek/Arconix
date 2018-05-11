@@ -42,7 +42,7 @@
         <!--Private Repo for CB-->
         <repository>
             <id>songoda-private</id>
-            <url>http://jenkins.songoda.com:8081/repository/sondoga-private/</url>
+            <url>http://repo.songoda.com/repository/sondoga-private/</url>
         </repository>
     </repositories>
 </project>
