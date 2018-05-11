@@ -1,6 +1,7 @@
 package com.songoda.arconix.plugin.Commands;
 
 import com.songoda.arconix.api.methods.Formatting;
+import com.songoda.arconix.plugin.Arconix;
 import com.songoda.arconix.plugin.Commands.Subcommands.*;
 import org.bukkit.entity.Player;
 
@@ -33,6 +34,7 @@ public class ArconixCMD extends BaseCommand {
         if (args.length == 0) {
             p.sendMessage("");
             p.sendMessage(formatting.formatText("&6&l&n                       &r&e&lArconix&6&l&n                       "));
+            p.sendMessage(formatting.formatText("&6Arconix Version: &5" + Arconix.pl().getDescription().getVersion()));
             p.sendMessage("");
             p.sendMessage(formatting.formatText("&f/&eArconix title/subtitle [FadeIn/Stay/FadeOut] <msg>"));
             p.sendMessage(formatting.formatText("&f/&eArconix actionbar <msg>"));
