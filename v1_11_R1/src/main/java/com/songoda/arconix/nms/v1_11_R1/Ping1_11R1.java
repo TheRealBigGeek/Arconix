@@ -1,4 +1,4 @@
-package com.songoda.arconix.nms.v1_11R1;
+package com.songoda.arconix.nms.v1_11_R1;
 
 import com.songoda.arconix.api.packets.UserPing;
 import org.bukkit.craftbukkit.v1_11_R1.entity.CraftPlayer;

@@ -7,18 +7,26 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
 /**
- * Created by songoda on 4/2/2017.
+ * ArconixPlayer that handles and makes various computations relating to players.
  */
 @SuppressWarnings("unused")
 public class APlayer {
 
     private Player player;
 
+    /**
+     * Creates new APlayer based off of the specified player.
+     *
+     * @param pl The player to use.
+     */
     public APlayer(Player pl) {
         player = pl;
     }
 
-
+    /**
+     * Gets the cardinal direction the player is facing.
+     * @return The cardinal direction the player is facing.
+     */
     public String getPlayerDirection() {
         String dir;
         float y = player.getLocation().getYaw();
@@ -27,44 +35,66 @@ public class APlayer {
         }
         y %= 360;
         int i = (int) ((y + 8) / 22.5);
-        if (i == 0) {
-            dir = "NORTH";
-        } else if (i == 1) {
-            dir = "NORTH";
-        } else if (i == 2) {
-            dir = "EAST";
-        } else if (i == 3) {
-            dir = "EAST";
-        } else if (i == 4) {
-            dir = "EAST";
-        } else if (i == 5) {
-            dir = "EAST";
-        } else if (i == 6) {
-            dir = "EAST";
-        } else if (i == 7) {
-            dir = "SOUTH";
-        } else if (i == 8) {
-            dir = "SOUTH";
-        } else if (i == 9) {
-            dir = "SOUTH";
-        } else if (i == 10) {
-            dir = "WEST";
-        } else if (i == 11) {
-            dir = "WEST";
-        } else if (i == 12) {
-            dir = "WEST";
-        } else if (i == 13) {
-            dir = "WEST";
-        } else if (i == 14) {
-            dir = "WEST";
-        } else if (i == 15) {
-            dir = "NORTH";
-        } else {
-            dir = "NORTH";
+        switch (i) {
+            case 0:
+                dir = "NORTH";
+                break;
+            case 1:
+                dir = "NORTH";
+                break;
+            case 2:
+                dir = "EAST";
+                break;
+            case 3:
+                dir = "EAST";
+                break;
+            case 4:
+                dir = "EAST";
+                break;
+            case 5:
+                dir = "EAST";
+                break;
+            case 6:
+                dir = "EAST";
+                break;
+            case 7:
+                dir = "SOUTH";
+                break;
+            case 8:
+                dir = "SOUTH";
+                break;
+            case 9:
+                dir = "SOUTH";
+                break;
+            case 10:
+                dir = "WEST";
+                break;
+            case 11:
+                dir = "WEST";
+                break;
+            case 12:
+                dir = "WEST";
+                break;
+            case 13:
+                dir = "WEST";
+                break;
+            case 14:
+                dir = "WEST";
+                break;
+            case 15:
+                dir = "NORTH";
+                break;
+            default:
+                dir = "NORTH";
+                break;
         }
         return dir;
     }
 
+    /**
+     * Gets the entity the player is currently looking at.
+     * @return The entity the player is currently looking at.
+     */
     public Entity getTarget() {
         assert player != null;
         Entity target = null;
@@ -86,6 +116,10 @@ public class APlayer {
         return target;
     }
 
+    /**
+     * Plays the specified sound to the player.
+     * @param s The sound to play.
+     */
     public void playSound(Sound s) {
         player.playSound(player.getLocation(), s, 0.6F, 10.0F);
     }

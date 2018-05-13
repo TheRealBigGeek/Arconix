@@ -3,8 +3,14 @@ package com.songoda.arconix.api.packets;
 import org.bukkit.entity.Player;
 
 /**
- * Created by Kiran Hart on 4/15/2017.
+ * Handles NMS code for easily getting the Player's current ping in MS.
  */
 public interface UserPing {
+    /**
+     * Gets the current ping of the player.
+     *
+     * @param p The player whose ping is to be gotten.
+     * @return The current ping of the player in MS.
+     */
     int getPing(Player p);
 }

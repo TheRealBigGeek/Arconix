@@ -17,11 +17,12 @@ import java.util.*;
 /**
  * Created by songoda on 4/2/2017. Use {@link com.songoda.arconix.api.methods.serialize.Serialize}
  */
+@SuppressWarnings("Duplicates")
 @Deprecated
 public class Serializer {
     private static Serializer instance;
 
-    private Map<String, Location> serializecache = new HashMap<>();
+    private Map<String, Location> serializeCache = new HashMap<>();
 
     //make singleton
     private Serializer() {
@@ -32,7 +33,6 @@ public class Serializer {
             instance = new Serializer();
         return instance;
     }
-
 
     public String serializeLocation(Block b) {
         return serializeLocation(b.getLocation());
@@ -48,8 +48,8 @@ public class Serializer {
     }
 
     public Location unserializeLocation(String str) {
-        if (serializecache.containsKey(str)) {
-            return serializecache.get(str).clone();
+        if (serializeCache.containsKey(str)) {
+            return serializeCache.get(str).clone();
         }
         String cachekey = str;
         str = str.replace("y:", ":").replace("z:", ":").replace("w:", "").replace("x:", ":").replace("~", ".");
@@ -58,7 +58,7 @@ public class Serializer {
         World world = Bukkit.getWorld(args.get(0));
         double x = Double.parseDouble(args.get(1)), y = Double.parseDouble(args.get(2)), z = Double.parseDouble(args.get(3));
         Location location = new Location(world, x, y, z, 0, 0);
-        serializecache.put(cachekey, location.clone());
+        serializeCache.put(cachekey, location.clone());
         return location;
     }
 
@@ -68,8 +68,8 @@ public class Serializer {
             BukkitObjectOutputStream dataOutput = new BukkitObjectOutputStream(outputStream);
 
             dataOutput.writeInt(items.size());
-            for (int i = 0; i < items.size(); i++) {
-                dataOutput.writeObject(items.get(i));
+            for (ItemStack item : items) {
+                dataOutput.writeObject(item);
             }
             dataOutput.close();
             return Base64Coder.encodeLines(outputStream.toByteArray());

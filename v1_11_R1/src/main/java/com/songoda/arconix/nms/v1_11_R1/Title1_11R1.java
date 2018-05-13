@@ -1,4 +1,4 @@
-package com.songoda.arconix.nms.v1_11R1;
+package com.songoda.arconix.nms.v1_11_R1;
 
 import com.songoda.arconix.api.events.Custom.TitleSendEvent;
 import com.songoda.arconix.api.methods.Formatting;

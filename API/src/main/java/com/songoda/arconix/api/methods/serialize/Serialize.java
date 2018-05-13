@@ -14,6 +14,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * Handles various serialization methods to help standardize data saving.
+ */
 @SuppressWarnings({"WeakerAccess", "Duplicates", "unused"})
 public class Serialize {
     private static Serialize instance;
@@ -24,16 +27,31 @@ public class Serialize {
     private Serialize() {
     }
 
+    /**
+     * Gets the currently loaded instance of the Serializer.
+     *
+     * @return The currently loaded instance of the serializer.
+     */
     public static Serialize getInstance() {
         if (instance == null)
             instance = new Serialize();
         return instance;
     }
 
+    /**
+     * Serializes the location of the block specified.
+     * @param b The block whose location is to be saved.
+     * @return The serialized data.
+     */
     public String serializeLocation(Block b) {
         return serializeLocation(b.getLocation());
     }
 
+    /**
+     * Serializes the location specified.
+     * @param location The location that is to be saved.
+     * @return The serialized data.
+     */
     public String serializeLocation(Location location) {
         String w = location.getWorld().getName();
         double x = location.getX();
@@ -44,6 +62,11 @@ public class Serialize {
         return str;
     }
 
+    /**
+     * Deserializes a location from the string.
+     * @param str The string to parse.
+     * @return The location that was serialized in the string.
+     */
     public Location unserializeLocation(String str) {
         if (serializeCache.containsKey(str)) {
             return serializeCache.get(str).clone();
@@ -59,6 +82,11 @@ public class Serialize {
         return location;
     }
 
+    /**
+     * Converts a list of ItemStacks to Base64 encoding.
+     * @param items A list of items to convert.
+     * @return A Base64 string representing the specified items.
+     */
     public String toBase64(List<ItemStack> items) {
         try {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -75,6 +103,12 @@ public class Serialize {
         }
     }
 
+    /**
+     * Converts a Base64 string back into a list of ItemStacks.
+     * @param data The data to parse.
+     * @return A list of ItemStacks from the Base64 string.
+     * @throws IOException If the String is not Base64
+     */
     public List<ItemStack> fromBase64(String data) throws IOException {
         try {
             ByteArrayInputStream inputStream = new ByteArrayInputStream(Base64Coder.decodeLines(data));
