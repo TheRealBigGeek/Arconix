@@ -39,6 +39,9 @@ public class Serializer {
     }
 
     public String serializeLocation(Location location) {
+        if (!location.getChunk().isLoaded())
+            location.getChunk().load();
+
         String w = location.getWorld().getName();
         double x = location.getX();
         double y = location.getY();
