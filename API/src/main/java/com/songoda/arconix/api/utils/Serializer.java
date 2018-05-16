@@ -1,5 +1,6 @@
 package com.songoda.arconix.api.utils;
 
+import com.songoda.arconix.api.ArconixAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -39,8 +40,9 @@ public class Serializer {
     }
 
     public String serializeLocation(Location location) {
-        if (!location.getChunk().isLoaded())
-            location.getChunk().load();
+        if (!location.getChunk().isLoaded()) {
+            Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(ArconixAPI.getApi().plugin, () -> location.getChunk().load());
+        }
 
         String w = location.getWorld().getName();
         double x = location.getX();
