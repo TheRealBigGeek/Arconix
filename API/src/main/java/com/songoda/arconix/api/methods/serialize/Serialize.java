@@ -44,6 +44,8 @@ public class Serialize {
      * @return The serialized data.
      */
     public String serializeLocation(Block b) {
+        if (b == null)
+            return "";
         return serializeLocation(b.getLocation());
     }
 
@@ -53,6 +55,8 @@ public class Serialize {
      * @return The serialized data.
      */
     public String serializeLocation(Location location) {
+        if (location == null)
+            return "";
         String w = location.getWorld().getName();
         double x = location.getX();
         double y = location.getY();
@@ -68,6 +72,8 @@ public class Serialize {
      * @return The location that was serialized in the string.
      */
     public Location unserializeLocation(String str) {
+        if (str == null || str.equals(""))
+            return null;
         if (serializeCache.containsKey(str)) {
             return serializeCache.get(str).clone();
         }
@@ -88,6 +94,8 @@ public class Serialize {
      * @return A Base64 string representing the specified items.
      */
     public String toBase64(List<ItemStack> items) {
+        if (items == null || items.size() < 1)
+            return "";
         try {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             BukkitObjectOutputStream dataOutput = new BukkitObjectOutputStream(outputStream);
@@ -110,6 +118,9 @@ public class Serialize {
      * @throws IOException If the String is not Base64
      */
     public List<ItemStack> fromBase64(String data) throws IOException {
+        if (data == null || data.equals(""))
+            return null;
+
         try {
             ByteArrayInputStream inputStream = new ByteArrayInputStream(Base64Coder.decodeLines(data));
             BukkitObjectInputStream dataInput = new BukkitObjectInputStream(inputStream);

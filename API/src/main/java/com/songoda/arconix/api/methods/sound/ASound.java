@@ -18,6 +18,8 @@ public class ASound {
      * @param sound The sound to play. Format: <code>ENUM_VALUE:pitch</code>
      */
     public static void playSoundForAll(String sound) {
+        if (sound == null || sound.equals(""))
+            return;
         for (Player pl : Bukkit.getOnlinePlayers()) {
             playSound(pl, sound);
         }
@@ -28,6 +30,8 @@ public class ASound {
      * @param sounds A list of sounds to play. Format: <code>ENUM_VALUE:pitch</code>
      */
     public static void playSoundForAll(List<String> sounds) {
+        if (sounds == null || sounds.size() < 1)
+            return;
         for (Player pl : Bukkit.getOnlinePlayers()) {
             playSound(pl, sounds);
         }
@@ -39,6 +43,8 @@ public class ASound {
      * @param sounds A list of sounds to play. Format: <code>ENUM_VALUE:pitch</code>
      */
     public static void playSound(Player p, List<String> sounds) {
+        if (p == null || sounds == null || sounds.size() < 1)
+            return;
         for (String sound : sounds) {
             playSound(p, sound);
         }
@@ -50,6 +56,8 @@ public class ASound {
      * @param sound The sound to play. Format: <code>ENUM_VALUE:pitch</code>
      */
     public static void playSound(Player p, String sound) {
+        if (p == null || sound == null || sound.equals(""))
+            return;
         float pitch = Float.valueOf(sound.split(":")[1]);
         sound = sound.split(":")[0];
         p.playSound(p.getLocation(), org.bukkit.Sound.valueOf(sound), pitch, 5.0F);

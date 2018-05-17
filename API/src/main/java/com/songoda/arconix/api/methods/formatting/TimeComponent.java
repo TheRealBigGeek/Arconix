@@ -17,6 +17,8 @@ public class TimeComponent {
      * @return A human readable string representing to specified time.
      */
     public static String makeReadable(Long time) {
+        if (time == null)
+            return "";
         return String.format(ArconixAPI.getApi().plugin.getConfig().getString("settings.Countdown-format"), TimeUnit.MILLISECONDS.toHours(time), TimeUnit.MILLISECONDS.toMinutes(time) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(time)), TimeUnit.MILLISECONDS.toSeconds(time) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(time)));
     }
 }

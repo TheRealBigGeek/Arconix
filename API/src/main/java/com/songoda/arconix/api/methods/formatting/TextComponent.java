@@ -70,6 +70,8 @@ public class TextComponent {
      * @return The formatted text.
      */
     public static String formatTitle(String text) {
+        if (text == null || text.equals(""))
+            return "";
         if (ArconixAPI.getApi().v1_7 || ArconixAPI.getApi().v1_8) {
             if (text.length() > 31)
                 text = text.substring(0, 29) + "...";
@@ -84,6 +86,8 @@ public class TextComponent {
      * @return The formatted text.
      */
     public static String formatText(String text) {
+        if (text == null || text.equals(""))
+            return "";
         return TextComponent.formatText(text, false);
     }
 
@@ -94,6 +98,8 @@ public class TextComponent {
      * @return The formatted text.
      */
     public static String formatText(String text, boolean cap) {
+        if (text == null || text.equals(""))
+            return "";
         if (cap)
             text = text.substring(0, 1).toUpperCase() + text.substring(1);
         return ChatColor.translateAlternateColorCodes('&', text);
@@ -105,6 +111,8 @@ public class TextComponent {
      * @return The string but invisible to MC clients.
      */
     public static String convertToInvisibleString(String s) {
+        if (s == null || s.equals(""))
+            return "";
         StringBuilder hidden = new StringBuilder();
         for (char c : s.toCharArray()) hidden.append(ChatColor.COLOR_CHAR + "").append(c);
         return hidden.toString();

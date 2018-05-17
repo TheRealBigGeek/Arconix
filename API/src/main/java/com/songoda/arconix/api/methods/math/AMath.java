@@ -12,6 +12,8 @@ public class AMath {
      * @return <code>true</code> if the string is numeric, otherwise <code>false</code>
      */
     public boolean isNumeric(String s) {
+        if (s == null || s.equals(""))
+            return false;
         return s.matches("[-+]?\\d*\\.?\\d+");
     }
 
@@ -21,6 +23,8 @@ public class AMath {
      * @return <code>true</code> if the string is an Integer, otherwise <code>false</code>
      */
     public static boolean isInt(String number) {
+        if (number == null || number.equals(""))
+            return false;
         try {
             Integer.parseInt(number);
         } catch (NumberFormatException e) {

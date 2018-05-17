@@ -36,10 +36,14 @@ public class Serializer {
     }
 
     public String serializeLocation(Block b) {
+        if (b == null)
+            return "";
         return serializeLocation(b.getLocation());
     }
 
     public String serializeLocation(Location location) {
+        if (location == null)
+            return "";
         if (!location.getChunk().isLoaded()) {
             Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(ArconixAPI.getApi().plugin, () -> location.getChunk().load());
         }
@@ -53,6 +57,9 @@ public class Serializer {
     }
 
     public Location unserializeLocation(String str) {
+        if (str == null || str.equals(""))
+            return null;
+
         if (serializeCache.containsKey(str)) {
             return serializeCache.get(str).clone();
         }
@@ -68,6 +75,9 @@ public class Serializer {
     }
 
     public String toBase64(List<ItemStack> items) {
+        if (items == null || items.size() < 1)
+            return "";
+
         try {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             BukkitObjectOutputStream dataOutput = new BukkitObjectOutputStream(outputStream);
@@ -84,6 +94,9 @@ public class Serializer {
     }
 
     public List<ItemStack> fromBase64(String data) throws IOException {
+        if (data == null || data.equals(""))
+            return null;
+
         try {
             ByteArrayInputStream inputStream = new ByteArrayInputStream(Base64Coder.decodeLines(data));
             BukkitObjectInputStream dataInput = new BukkitObjectInputStream(inputStream);
