@@ -1,5 +1,9 @@
 package com.songoda.arconix.api.utils;
 
+/**
+ * Default font info for better handling of characters.
+ */
+@SuppressWarnings("unused")
 public enum DefaultFontInfo {
 
     A('A', 5),
@@ -73,7 +77,7 @@ public enum DefaultFontInfo {
     AMPERSAND('&', 5),
     ASTERISK('*', 5),
     LEFT_PARENTHESIS('(', 4),
-    RIGHT_PERENTHESIS(')', 4),
+    RIGHT_PARENTHESIS(')', 4),
     MINUS('-', 5),
     UNDERSCORE('_', 5),
     PLUS_SIGN('+', 5),

@@ -4,6 +4,7 @@ import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import org.apache.commons.codec.binary.Base64;
 import org.bukkit.Material;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
@@ -12,8 +13,15 @@ import java.lang.reflect.Field;
 import java.util.UUID;
 
 @SuppressWarnings({"Duplicates", "unused"})
-public class Inventory {
+public class AInventory {
 
+    /**
+     * Creates a glass itemstack
+     *
+     * @param rainbow Whether or not to assign a random color to the glass.
+     * @param type    If rainbow is false, the glass color.
+     * @return A glass itemstack conforming to the params.
+     */
     public static ItemStack toGlass(Boolean rainbow, int type) {
         int randomNum = 1 + (int) (Math.random() * 6);
         ItemStack glass;
@@ -28,7 +36,13 @@ public class Inventory {
         return glass;
     }
 
-    public static void fillGlass(org.bukkit.inventory.Inventory i, int type) {
+    /**
+     * Fills the provided inventory with glass panes of the specified color type.
+     *
+     * @param i    The inventory to fill.
+     * @param type The color type of the glass.
+     */
+    public static void fillGlass(Inventory i, int type) {
         ItemStack glass = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) type);
         ItemMeta glassMeta = glass.getItemMeta();
         glassMeta.setDisplayName("§5");
@@ -41,6 +55,12 @@ public class Inventory {
         }
     }
 
+    /**
+     * Adds the specified texture to the supplied head itemstack.
+     * @param item A head to apply the texture to.
+     * @param headURL The URL of the texture to apply.
+     * @return The head with the textrue.
+     */
     public ItemStack addTexture(ItemStack item, String headURL) {
         SkullMeta meta = (SkullMeta) item.getItemMeta();
 
@@ -60,7 +80,14 @@ public class Inventory {
         return item;
     }
 
-    public boolean inventoryContains(org.bukkit.inventory.Inventory inventory, ItemStack item) {
+    /**
+     * Checks if the inventory contains the specified item.
+     *
+     * @param inventory The inventory to check
+     * @param item      The item to check for.
+     * @return Whether or not the inventory contains the item.
+     */
+    public boolean inventoryContains(Inventory inventory, ItemStack item) {
         int count = 0;
         ItemStack[] items = inventory.getContents();
         for (ItemStack item1 : items) {
@@ -74,7 +101,13 @@ public class Inventory {
         return false;
     }
 
-    public void removeFromInventory(org.bukkit.inventory.Inventory inventory, ItemStack item) {
+    /**
+     * Removes the specified item from the inventory
+     *
+     * @param inventory The inventory to remove from.
+     * @param item      The item to remove.
+     */
+    public void removeFromInventory(Inventory inventory, ItemStack item) {
         int amt = item.getAmount();
         ItemStack[] items = inventory.getContents();
         for (int i = 0; i < items.length; i++) {
@@ -94,7 +127,14 @@ public class Inventory {
         inventory.setContents(items);
     }
 
-    public int getAmount(org.bukkit.inventory.Inventory inv, ItemStack item) {
+    /**
+     * Gets the amount of the specified item type in the inventory. <bold>FOR 1.7 ONLY</bold> otherwise, use {@link Inventory#all(Material)}
+     *
+     * @param inv  The inventory to check.
+     * @param item The item to check for
+     * @return The amount of the item present.
+     */
+    public int getAmount(Inventory inv, ItemStack item) {
         ItemStack[] items = inv.getContents();
         int has = 0;
         for (ItemStack itm : items) {

@@ -16,6 +16,11 @@ public class PacketLibrary {
     private TabList tabListManager;
     private UserPing pingManager;
 
+    /**
+     * Sets up various packet managers for NMS specific code functions. This is automatically called when the ArconixAPI is first init.
+     *
+     * @param serverVersion The current version of the server.
+     */
     public void setupPackets(String serverVersion) {
         try {
             switch (serverVersion) {
@@ -76,15 +81,6 @@ public class PacketLibrary {
                     tabListManager = (TabList) Class.forName("com.songoda.arconix.nms.v1_8_R3.TabList1_8R3").getConstructor().newInstance();
                     pingManager = (UserPing) Class.forName("com.songoda.arconix.nms.v1_8_R3.Ping1_8R3").getConstructor().newInstance();
                     break;
-                case "v1_8_R2":
-                    particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_8_R2.Particle1_8R2").getConstructor().newInstance();
-                    actionBarManager = (ActionBar) Class.forName("com.songoda.arconix.nms.v1_8_R2.ActionBar1_8R2").getConstructor().newInstance();
-                    hologramManager = (Hologram) Class.forName("com.songoda.arconix.nms.v1_8_R2.Hologram1_8R2").getConstructor().newInstance();
-                    titleManager = (Title) Class.forName("com.songoda.arconix.nms.v1_8_R2.Title1_8R2").getConstructor().newInstance();
-                    signEditorManager = (SignEditor) Class.forName("com.songoda.arconix.nms.v1_8_R2.SignEditor1_8R2").getConstructor().newInstance();
-                    tabListManager = (TabList) Class.forName("com.songoda.arconix.nms.v1_8_R2.TabList1_8R2").getConstructor().newInstance();
-                    pingManager = (UserPing) Class.forName("com.songoda.arconix.nms.v1_8_R2.Ping1_8R2").getConstructor().newInstance();
-                    break;
                 case "v1_8_R1":
                     particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_8_R1.Particle1_8R1").getConstructor().newInstance();
                     actionBarManager = (ActionBar) Class.forName("com.songoda.arconix.nms.v1_8_R1.ActionBar1_8R1").getConstructor().newInstance();
@@ -110,34 +106,66 @@ public class PacketLibrary {
         }
     }
 
+    /**
+     * Gets the {@link Particle} instance for the current server version.
+     * @return The {@link Particle} instance for the current server version.
+     */
     public Particle getParticleManager() {
         return particleManager;
     }
 
+    /**
+     * Gets the {@link ActionBar} instance for the current server version.
+     * @return The {@link ActionBar} instance for the current server version.
+     */
     public ActionBar getActionBarManager() {
         return actionBarManager;
     }
 
+    /**
+     * Gets the {@link Hologram} instance for the current server version.
+     * @return The {@link Hologram} instance for the current server version.
+     */
     public Hologram getHologramManager() {
         return hologramManager;
     }
 
+    /**
+     * Gets the {@link Title} instance for the current server version.
+     * @return The {@link Title} instance for the current server version.
+     */
     public Title getTitleManager() {
         return titleManager;
     }
 
+    /**
+     * Gets the {@link Enchantment} instance for the current server version.
+     * @return The {@link Enchantment} instance for the current server version.
+     */
     public Enchantment getEnchantmentManager() {
         return enchantmentManager;
     }
 
+    /**
+     * Gets the {@link SignEditor} instance for the current server version.
+     * @return The {@link SignEditor} instance for the current server version.
+     */
     public SignEditor getSignEditorManager() {
         return signEditorManager;
     }
 
+    /**
+     * Gets the {@link TabList} instance for the current server version.
+     * @return The {@link TabList} instance for the current server version.
+     */
     public TabList getTabListManager() {
         return tabListManager;
     }
 
+    /**
+     * Gets the {@link UserPing} instance for the current server version.
+     * @return The {@link UserPing} instance for the current server version.
+     */
     public UserPing getPingManager() {
         return pingManager;
     }

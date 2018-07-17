@@ -16,7 +16,9 @@ public class Formatting {
     private final int CENTER_PX = 154;
 
     public void center(Player player, String message) {
-        if (message == null || message.equals("")) player.sendMessage("");
+        if (message == null || message.equals(""))
+            player.sendMessage("");
+
         message = ChatColor.translateAlternateColorCodes('&', message);
 
         int messagePxSize = 0;
@@ -54,6 +56,8 @@ public class Formatting {
     }
 
     public String formatTitle(String text) {
+        if (text == null || text.equals(""))
+            return "";
         if (ArconixAPI.getApi().v1_7 || ArconixAPI.getApi().v1_8) {
             if (text.length() > 31)
                 text = text.substring(0, 29) + "...";
@@ -63,22 +67,28 @@ public class Formatting {
     }
 
     public String formatText(String text) {
+        if (text == null || text.equals(""))
+            return "";
         return formatText(text, false);
     }
 
     public String formatText(String text, boolean cap) {
+        if (text == null || text.equals(""))
+            return "";
         if (cap)
             text = text.substring(0, 1).toUpperCase() + text.substring(1);
         return ChatColor.translateAlternateColorCodes('&', text);
     }
 
-    public String readableTime(Long time) {
+    public String readableTime(long time) {
         return String.format(ArconixAPI.getApi().plugin.getConfig().getString("settings.Countdown-format"), TimeUnit.MILLISECONDS.toHours(time),
                 TimeUnit.MILLISECONDS.toMinutes(time) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(time)),
                 TimeUnit.MILLISECONDS.toSeconds(time) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(time)));
     }
 
     public String convertToInvisibleString(String s) {
+        if (s == null || s.equals(""))
+            return "";
         StringBuilder hidden = new StringBuilder();
         for (char c : s.toCharArray()) hidden.append(ChatColor.COLOR_CHAR + "").append(c);
         return hidden.toString();

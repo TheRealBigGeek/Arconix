@@ -1,5 +1,6 @@
 package com.songoda.arconix.api.utils;
 
+import com.songoda.arconix.api.ArconixAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -17,11 +18,12 @@ import java.util.*;
 /**
  * Created by songoda on 4/2/2017. Use {@link com.songoda.arconix.api.methods.serialize.Serialize}
  */
+@SuppressWarnings("Duplicates")
 @Deprecated
 public class Serializer {
     private static Serializer instance;
 
-    private Map<String, Location> serializecache = new HashMap<>();
+    private Map<String, Location> serializeCache = new HashMap<>();
 
     //make singleton
     private Serializer() {
@@ -33,12 +35,19 @@ public class Serializer {
         return instance;
     }
 
-
     public String serializeLocation(Block b) {
+        if (b == null)
+            return "";
         return serializeLocation(b.getLocation());
     }
 
     public String serializeLocation(Location location) {
+        if (location == null)
+            return "";
+        if (!location.getChunk().isLoaded()) {
+            Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(ArconixAPI.getApi().plugin, () -> location.getChunk().load());
+        }
+
         String w = location.getWorld().getName();
         double x = location.getX();
         double y = location.getY();
@@ -48,8 +57,11 @@ public class Serializer {
     }
 
     public Location unserializeLocation(String str) {
-        if (serializecache.containsKey(str)) {
-            return serializecache.get(str).clone();
+        if (str == null || str.equals(""))
+            return null;
+
+        if (serializeCache.containsKey(str)) {
+            return serializeCache.get(str).clone();
         }
         String cachekey = str;
         str = str.replace("y:", ":").replace("z:", ":").replace("w:", "").replace("x:", ":").replace("~", ".");
@@ -58,18 +70,21 @@ public class Serializer {
         World world = Bukkit.getWorld(args.get(0));
         double x = Double.parseDouble(args.get(1)), y = Double.parseDouble(args.get(2)), z = Double.parseDouble(args.get(3));
         Location location = new Location(world, x, y, z, 0, 0);
-        serializecache.put(cachekey, location.clone());
+        serializeCache.put(cachekey, location.clone());
         return location;
     }
 
     public String toBase64(List<ItemStack> items) {
+        if (items == null || items.size() < 1)
+            return "";
+
         try {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             BukkitObjectOutputStream dataOutput = new BukkitObjectOutputStream(outputStream);
 
             dataOutput.writeInt(items.size());
-            for (int i = 0; i < items.size(); i++) {
-                dataOutput.writeObject(items.get(i));
+            for (ItemStack item : items) {
+                dataOutput.writeObject(item);
             }
             dataOutput.close();
             return Base64Coder.encodeLines(outputStream.toByteArray());
@@ -79,6 +94,9 @@ public class Serializer {
     }
 
     public List<ItemStack> fromBase64(String data) throws IOException {
+        if (data == null || data.equals(""))
+            return null;
+
         try {
             ByteArrayInputStream inputStream = new ByteArrayInputStream(Base64Coder.decodeLines(data));
             BukkitObjectInputStream dataInput = new BukkitObjectInputStream(inputStream);

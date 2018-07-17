@@ -27,7 +27,6 @@
         <module>v1_10_R1</module>
         <module>v1_9_R1</module>
         <module>v1_8_R3</module>
-        <module>v1_8_R2</module>
         <module>v1_8_R1</module>
         <module>v1_7_R4</module>
         <module>Plugin</module>
@@ -42,7 +41,7 @@
         <!--Private Repo for CB-->
         <repository>
             <id>songoda-private</id>
-            <url>http://jenkins.songoda.com:8081/repository/sondoga-private/</url>
+            <url>http://repo.songoda.com/repository/sondoga-private/</url>
         </repository>
     </repositories>
 </project>

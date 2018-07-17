@@ -1,7 +1,7 @@
 package com.songoda.arconix.api.handlers;
 
 import com.songoda.arconix.api.ArconixAPI;
-import com.songoda.arconix.api.utils.Serializer;
+import com.songoda.arconix.api.methods.serialize.Serialize;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
@@ -28,7 +28,7 @@ public class HologramHandler {
             ConfigurationSection cs = api.hologramFile.getConfig().getConfigurationSection("Holograms");
             for (String key : cs.getKeys(false)) {
                 List<String> list = api.hologramFile.getConfig().getStringList("Holograms." + key + ".lines");
-                Location location = Serializer.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + key + ".location"));
+                Location location = Serialize.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + key + ".location"));
                 map.put(location, list);
             }
         }
@@ -36,6 +36,8 @@ public class HologramHandler {
     }
 
     public void stream(Chunk chunk) {
+        if (chunk == null)
+            return;
         for (Location loc : api.packetLibrary.getHologramManager().getLocations()) {
             if (loc.getChunk().equals(chunk)) {
                 api.packetLibrary.getHologramManager().addHologram(loc);
@@ -44,8 +46,10 @@ public class HologramHandler {
     }
 
     public void deleteHologram(Player p, String name) {
+        if (name == null || name.equals(""))
+            return;
         if (api.hologramFile.getConfig().contains("Holograms")) {
-            Location location = Serializer.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + name + ".location"));
+            Location location = Serialize.getInstance().unserializeLocation(api.hologramFile.getConfig().getString("Holograms." + name + ".location"));
             api.hologramFile.getConfig().set("Holograms." + name, null);
             api.packetLibrary.getHologramManager().despawnHologram(location);
             stream(location.getChunk());
@@ -53,12 +57,16 @@ public class HologramHandler {
     }
 
     public void createHologram(Player p, String title, List<String> lines) {
+        if (p == null || title == null || title.equals("") || lines == null)
+            return;
         saveHologram(p.getLocation(), title, lines);
         api.packetLibrary.getHologramManager().spawnHolograms(p.getLocation(), lines);
         stream(p.getLocation().getChunk());
     }
 
     public void createHologram(Player p, String title, String line) {
+        if (p == null || title == null || title.equals("") || line == null)
+            return;
         List<String> lines = new ArrayList<>();
         lines.add(line);
         createHologram(p, title, lines);
@@ -66,7 +74,9 @@ public class HologramHandler {
     }
 
     public void saveHologram(Location location, String title, List<String> list) {
-        String serial = Serializer.getInstance().serializeLocation(location);
+        if (location == null || title == null || title.equals("") || list == null)
+            return;
+        String serial = Serialize.getInstance().serializeLocation(location);
         api.hologramFile.getConfig().set("Holograms." + title + ".location", serial);
         api.hologramFile.getConfig().set("Holograms." + title + ".lines", list);
     }

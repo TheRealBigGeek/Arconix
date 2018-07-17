@@ -2,6 +2,7 @@ package com.songoda.arconix.api.methods;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
+import com.songoda.arconix.api.methods.inventory.AInventory;
 import org.apache.commons.codec.binary.Base64;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
@@ -13,7 +14,7 @@ import java.lang.reflect.Field;
 import java.util.UUID;
 
 /**
- * Created by songoda on 4/2/2017. Use {@link com.songoda.arconix.api.methods.inventory.Inventory}
+ * Created by songoda on 4/2/2017. Use {@link AInventory}
  */
 @Deprecated
 public class GUI {

@@ -19,10 +19,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="old" level="project" />
     <orderEntry type="module" module-name="API" />
     <orderEntry type="module" module-name="v1_7_R4" />
     <orderEntry type="module" module-name="v1_8_R1" />
-    <orderEntry type="module" module-name="v1_8_R2" />
     <orderEntry type="module" module-name="v1_8_R3" />
     <orderEntry type="module" module-name="v1_9_R1" />
     <orderEntry type="module" module-name="v1_10_R1" />
@@ -36,6 +36,5 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.guava:guava:21.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.18" level="project" />
-    <orderEntry type="library" name="old" level="project" />
   </component>
 </module>
