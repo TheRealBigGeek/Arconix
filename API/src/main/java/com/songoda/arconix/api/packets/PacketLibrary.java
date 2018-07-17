@@ -19,6 +19,16 @@ public class PacketLibrary {
     public void setupPackets(String serverVersion) {
         try {
             switch (serverVersion) {
+                case "v1_13_R1":
+                    particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_13_R1.Particle1_13R1").getConstructor().newInstance();
+                    actionBarManager = (ActionBar) Class.forName("com.songoda.arconix.nms.v1_13_R1.ActionBar1_13R1").getConstructor().newInstance();
+                    hologramManager = (Hologram) Class.forName("com.songoda.arconix.nms.v1_13_R1.Hologram1_13R1").getConstructor().newInstance();
+                    enchantmentManager = (Enchantment) Class.forName("com.songoda.arconix.nms.v1_13_R1.Enchantment1_13R1").getConstructor().newInstance();
+                    titleManager = (Title) Class.forName("com.songoda.arconix.nms.v1_13_R1.Title1_13R1").getConstructor().newInstance();
+                    signEditorManager = (SignEditor) Class.forName("com.songoda.arconix.nms.v1_13_R1.SignEditor1_13R1").getConstructor().newInstance();
+                    tabListManager = (TabList) Class.forName("com.songoda.arconix.nms.v1_13_R1.TabList1_13R1").getConstructor().newInstance();
+                    pingManager = (UserPing) Class.forName("com.songoda.arconix.nms.v1_13_R1.Ping1_13R1").getConstructor().newInstance();
+                    break;
                 case "v1_12_R1":
                     particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_12_R1.Particle1_12R1").getConstructor().newInstance();
                     actionBarManager = (ActionBar) Class.forName("com.songoda.arconix.nms.v1_12_R1.ActionBar1_12R1").getConstructor().newInstance();

@@ -1,21 +1,21 @@
-package com.songoda.arconix.nms.v1_11R1;
+package com.songoda.arconix.nms.v1_13_R1;
 
 import com.songoda.arconix.api.events.Custom.TitleSendEvent;
 import com.songoda.arconix.api.methods.Formatting;
 import com.songoda.arconix.api.packets.Title;
-import net.minecraft.server.v1_11_R1.IChatBaseComponent;
-import net.minecraft.server.v1_11_R1.PacketPlayOutTitle;
-import net.minecraft.server.v1_11_R1.PlayerConnection;
+import net.minecraft.server.v1_13_R1.IChatBaseComponent;
+import net.minecraft.server.v1_13_R1.PacketPlayOutTitle;
+import net.minecraft.server.v1_13_R1.PlayerConnection;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_11_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_13_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 /**
  * Created by Kiran Hart on 4/4/2017.
  */
-public class Title1_11R1 implements Title {
+public class Title1_13R1 implements Title {
 
-    private Formatting formatting = new Formatting();
+    Formatting formatting = new Formatting();
 
     @Override
     public void sendTitle(Player p, String msg, int fadeIn, int stay, int fadeOut) {

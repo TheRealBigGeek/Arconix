@@ -27,6 +27,7 @@
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/methods/GUI.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/methods/Maths.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/methods/Sounds.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/methods/serialize/Serialize.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/packets/ActionBar.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/packets/Enchantment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/API/src/main/java/com/songoda/arconix/api/packets/Hologram.java" charset="UTF-8" />
@@ -63,13 +64,13 @@
     <file url="file://$PROJECT_DIR$/v1_10_R1/src/main/java/com/songoda/arconix/nms/v1_10_R1/TabList1_10R1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_10_R1/src/main/java/com/songoda/arconix/nms/v1_10_R1/Title1_10R1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_11_R1" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11R1/ActionBar1_11R1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11R1/Hologram1_11R1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11R1/Particle1_11R1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11R1/Ping1_11R1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11R1/SignEditor1_11R1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11R1/TabList1_11R1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11R1/Title1_11R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11_R1/ActionBar1_11R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11_R1/Hologram1_11R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11_R1/Particle1_11R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11_R1/Ping1_11R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11_R1/SignEditor1_11R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11_R1/TabList1_11R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_11_R1/src/main/java/com/songoda/arconix/nms/v1_11_R1/Title1_11R1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_12_R1" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/v1_12_R1/src/main/java/com/songoda/arconix/nms/v1_12_R1/ActionBar1_12R1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_12_R1/src/main/java/com/songoda/arconix/nms/v1_12_R1/Enchantment1_12R1.java" charset="UTF-8" />
@@ -79,6 +80,15 @@
     <file url="file://$PROJECT_DIR$/v1_12_R1/src/main/java/com/songoda/arconix/nms/v1_12_R1/SignEditor1_12R1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_12_R1/src/main/java/com/songoda/arconix/nms/v1_12_R1/TabList1_12R1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_12_R1/src/main/java/com/songoda/arconix/nms/v1_12_R1/Title1_12R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/ActionBar1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/Enchantment1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/Hologram1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/Particle1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/Ping1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/SignEditor1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/TabList1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/src/main/java/com/songoda/arconix/nms/v1_13_R1/Title1_13R1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/v1_13_R1/target" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_7_R4" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/v1_7_R4/src/main/java/com/songoda/arconix/nms/v1_7_R4/ActionBar1_7R4.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/v1_7_R4/src/main/java/com/songoda/arconix/nms/v1_7_R4/Particle1_7R4.java" charset="UTF-8" />
