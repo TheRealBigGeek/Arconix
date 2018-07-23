@@ -6,8 +6,7 @@
 
     <artifactId>plugin</artifactId>
     <name>Arconix</name>
-    <version>2.0.0</version>
-
+    
     <parent>
         <groupId>com.songoda.arconix</groupId>
         <version>2.0.0</version>
@@ -82,6 +81,14 @@
             <groupId>com.songoda.arconix.nms</groupId>
             <artifactId>v1_12_R1</artifactId>
             <version>v1_12_R1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.songoda.arconix.nms</groupId>
+            <artifactId>v1_13_R1</artifactId>
+            <version>v1_13_R1</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>
