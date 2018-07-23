@@ -20,6 +20,8 @@
             <artifactId>craftbukkit</artifactId>
             <version>1.13</version>
             <type>jar</type>
+            <optional>true</optional>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.songoda.arconix</groupId>
