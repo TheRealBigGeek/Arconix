@@ -16,6 +16,10 @@
       <element id="module-output" name="v1_7_R4" />
       <element id="module-output" name="v1_8_R3" />
       <element id="module-output" name="v1_8_R1" />
+      <element id="module-output" name="v1_13_R1" />
+      <element id="library" level="project" name="old" />
+      <element id="module-output" name="v1_13_R2" />
+      <element id="module-output" name="v1_9_R2" />
     </root>
   </artifact>
 </component>

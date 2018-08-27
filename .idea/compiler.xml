@@ -10,6 +10,7 @@
         <module name="v1_10_R1" />
         <module name="v1_11_R1" />
         <module name="v1_12_R1" />
+        <module name="v1_13_R1" />
         <module name="v1_7_R4" />
         <module name="v1_8_R1" />
         <module name="v1_8_R2" />
@@ -30,6 +31,7 @@
       <module name="v1_10_R1" target="8" />
       <module name="v1_11_R1" target="8" />
       <module name="v1_12_R1" target="8" />
+      <module name="v1_13_R1" target="8" />
       <module name="v1_7_R4" target="8" />
       <module name="v1_8_R1" target="8" />
       <module name="v1_8_R2" target="8" />
