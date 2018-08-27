@@ -96,9 +96,9 @@
 
         <!--Latest Bukkit release to build upon-->
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.12.1-R0.1-SNAPSHOT</version>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.13.1</version>
             <type>jar</type>
             <scope>provided</scope> <!-- The 'provided' scope will NOT get shaded in -->
             <optional>true</optional>
