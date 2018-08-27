@@ -73,6 +73,14 @@ public class PacketLibrary {
                     tabListManager = (TabList) Class.forName("com.songoda.arconix.nms.v1_10_R1.TabList1_10R1").getConstructor().newInstance();
                     pingManager = (UserPing) Class.forName("com.songoda.arconix.nms.v1_10_R1.UserPing1_10R1").getConstructor().newInstance();
                     break;
+                case "v1_9_R2":
+                    particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_9_R2.Particle1_9R2").getConstructor().newInstance();
+                    actionBarManager = (ActionBar) Class.forName("com.songoda.arconix.nms.v1_9_R2.ActionBaR2_9R2").getConstructor().newInstance();
+                    hologramManager = (Hologram) Class.forName("com.songoda.arconix.nms.v1_9_R2.Hologram1_9R2").getConstructor().newInstance();
+                    titleManager = (Title) Class.forName("com.songoda.arconix.nms.v1_9_R2.Title1_9R2").getConstructor().newInstance();
+                    signEditorManager = (SignEditor) Class.forName("com.songoda.arconix.nms.v1_9R2.SignEditoR2_9R2").getConstructor().newInstance();
+                    tabListManager = (TabList) Class.forName("com.songoda.arconix.nms.v1_9_R2.TabList1_9R2").getConstructor().newInstance();
+                    pingManager = (UserPing) Class.forName("com.songoda.arconix.nms.v1_9_R2.UserPing1_9R2").getConstructor().newInstance();
                 case "v1_9_R1":
                     particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_9_R1.Particle1_9R1").getConstructor().newInstance();
                     actionBarManager = (ActionBar) Class.forName("com.songoda.arconix.nms.v1_9_R1.ActionBar1_9R1").getConstructor().newInstance();
@@ -91,6 +99,16 @@ public class PacketLibrary {
                     signEditorManager = (SignEditor) Class.forName("com.songoda.arconix.nms.v1_8_R3.SignEditor1_8R3").getConstructor().newInstance();
                     tabListManager = (TabList) Class.forName("com.songoda.arconix.nms.v1_8_R3.TabList1_8R3").getConstructor().newInstance();
                     pingManager = (UserPing) Class.forName("com.songoda.arconix.nms.v1_8_R3.Ping1_8R3").getConstructor().newInstance();
+                    break;
+                case "v1_8_R2":
+                    particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_8_R2.Particle1_8R2").getConstructor().newInstance();
+                    actionBarManager = (ActionBar) Class.forName("com.songoda.arconix.nms.v1_8_R2.ActionBar1_8R2").getConstructor().newInstance();
+                    hologramManager = (Hologram) Class.forName("com.songoda.arconix.nms.v1_8_R2.Hologram1_8R2").getConstructor().newInstance();
+                    enchantmentManager = (Enchantment) Class.forName("com.songoda.arconix.nms.v1_8_R2.Enchantment1_8R2").getConstructor().newInstance();
+                    titleManager = (Title) Class.forName("com.songoda.arconix.nms.v1_8_R2.Title1_8R2").getConstructor().newInstance();
+                    signEditorManager = (SignEditor) Class.forName("com.songoda.arconix.nms.v1_8_R2.SignEditor1_8R2").getConstructor().newInstance();
+                    tabListManager = (TabList) Class.forName("com.songoda.arconix.nms.v1_8_R2.TabList1_8R2").getConstructor().newInstance();
+                    pingManager = (UserPing) Class.forName("com.songoda.arconix.nms.v1_8_R2.Ping1_8R2").getConstructor().newInstance();
                     break;
                 case "v1_8_R1":
                     particleManager = (Particle) Class.forName("com.songoda.arconix.nms.v1_8_R1.Particle1_8R1").getConstructor().newInstance();

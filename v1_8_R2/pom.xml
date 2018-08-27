@@ -11,14 +11,14 @@
     </parent>
 
     <groupId>com.songoda.arconix.nms</groupId>
-    <artifactId>v1_9_R2</artifactId>
-    <version>v1_9_R2</version>
+    <artifactId>v1_8_R2</artifactId>
+    <version>v1_8_R2</version>
 
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.9.4</version>
+            <version>1.8.3</version>
             <type>jar</type>
             <optional>true</optional>
             <scope>provided</scope>
