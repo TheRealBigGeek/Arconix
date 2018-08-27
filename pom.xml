@@ -37,11 +37,6 @@
     </modules>
 
     <repositories>
-        <!--Bukkit Repo-->
-        <repository>
-            <id>bukkit-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-        </repository>
         <!--Private Repo for CB-->
         <repository>
             <id>songoda-private</id>
